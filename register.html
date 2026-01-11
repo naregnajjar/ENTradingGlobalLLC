@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Sign In / Sign Up </title>
+ 
+
+</head>
+<body>
+    
+    <style>
+        /* Background */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #3b82f6, #0f172a 60%, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Floating blue glow */
+body::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: rgba(59, 130, 246, 0.45);
+  filter: blur(120px);
+  top: -100px;
+  left: -100px;
+}
+
+/* Glass Card */
+.glass-card {
+  width: 100%;
+  max-width: 440px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  /* Stainless / metallic border */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  /* Soft glass shadow */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* Glass Inputs */
+.glass-input {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  color: white;
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(59, 130, 246, 0.7);
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+  color: white;
+}
+
+/* Stainless Glass Button */
+.btn-glass {
+  border-radius: 14px;
+  padding: 12px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.85), rgba(37, 99, 235, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.btn-glass:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.45);
+}
+
+/* Pills Tabs */
+.nav-pills .nav-link {
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-pills .nav-link.active {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+    </style>
+    
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+    <div class="glass-card p-4 p-md-5">
+
+      <!-- Tabs -->
+      <ul class="nav nav-pills nav-fill mb-4" id="authTabs">
+        <li class="nav-item">
+          <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#login">Sign In</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register">Sign Up</button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+
+        <!-- Sign In -->
+        <div class="tab-pane fade show active" id="login">
+          <h3 class="text-white fw-bold mb-3">Welcome Back</h3>
+          <form>
+            <div class="mb-3">
+              <label class="text-white-50">Email</label>
+              <input type="email" class="form-control glass-input" placeholder="example@mail.com">
+            </div>
+            <div class="mb-3">
+              <label class="text-white-50">Password</label>
+              <input type="password" class="form-control glass-input" placeholder="********">
+            </div>
+
+            <button class="btn btn-glass w-100 mt-2">Sign In</button>
+          </form>
+        </div>
+
+        <!-- Sign Up -->
+        <div class="tab-pane fade" id="register">
+          <h3 class="text-white fw-bold mb-3">Create Account</h3>
+          <form>
+            <div class="mb-3">
+              <label class="text-white-50">Full Name</label>
+              <input type="text" class="form-control glass-input" placeholder="John Doe">
+            </div>
+            <div class="mb-3">
+              <label class="text-white-50">Email</label>
+              <input type="email" class="form-control glass-input" placeholder="example@mail.com">
+            </div>
+            <div class="mb-3">
+              <label class="text-white-50">Password</label>
+              <input type="password" class="form-control glass-input" placeholder="********">
+            </div>
+
+            <button class="btn btn-glass w-100 mt-2">Sign Up</button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+</html>
