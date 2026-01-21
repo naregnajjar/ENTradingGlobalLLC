@@ -403,6 +403,51 @@ p {
   content: none;
 }
 
+/* ------------------------------------------------------------------
+   Circular logos, avatars and background-image thumbnails
+   Ensures consistent circular appearance and responsive sizing
+ -------------------------------------------------------------------- */
+.logo img,
+.header-logo .logo img,
+.site_footer_widget img,
+.single-client img {
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  width: 64px;
+  height: auto;
+}
+
+.single-client img { width: 84px; }
+
+.member-img,
+.client-img,
+.recent-post-list .thumb,
+.case-thumb {
+  border-radius: 50%;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1 / 1;
+  width: 120px;
+  height: 120px;
+}
+
+@media (max-width: 767px) {
+  .member-img, .client-img, .recent-post-list .thumb, .case-thumb {
+    width: 80px;
+    height: 80px;
+  }
+  .logo img, .site_footer_widget img { width: 48px; }
+}
+
+/* Optional: ensure images inside links don't overflow */
+.single-client img, .site_footer_widget img { max-width: 100%; height: auto; }
+
 .align-center-v {
   height: 100%;
   display: -webkit-box;
